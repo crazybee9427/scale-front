@@ -71,7 +71,7 @@ export function useDashboard() {
       basicLoading.value = true;
       error.value = null;
       const response = await axios.post<{ data: BasicWorkspaceStats[] }>(
-        "http://5.9.10.121:8000/api/dashboard/basic"
+        "http://5.9.10.121:6666/api/dashboard/basic"
       );
       workspaces.value = response.data.data || [];
       return response.data;
@@ -89,7 +89,7 @@ export function useDashboard() {
       detailsLoading.value = true;
       detailsError.value = null;
       const response = await axios.post<{ data: DetailedWorkspaceStats[] }>(
-        "http://5.9.10.121:8000/api/dashboard/details"
+        "http://5.9.10.121:6666/api/dashboard/details"
       );
       detailedWorkspaces.value = response.data.data || [];
       return response.data;
@@ -106,7 +106,7 @@ export function useDashboard() {
     replyRateLoading.value = true;
     try {
       const response = await axios.post(
-        "http://5.9.10.121:8000/api/dashboard/reply-rates"
+        "http://5.9.10.121:6666/api/dashboard/reply-rates"
       );
       replyRateStats.value = { data: response.data.data };
       return response.data;
