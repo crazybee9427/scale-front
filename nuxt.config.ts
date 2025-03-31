@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "@nuxt/ui",
   ],
+
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000
+  }
 });
